@@ -1,0 +1,102 @@
+:root {
+  --primary-color: #191991;
+  --secondary-color: white;
+  --third-color: whitesmoke;
+  --fourth-color: black;
+  --fifth-color: rgb(87, 55, 171);
+  --six-color: #387d31;
+  --red: red;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, auto);
+  gap: 20px;
+  width: 95vw;
+}
+
+.box-white {
+  color: var(--secondary-color);
+}
+.box-blue {
+  color: var(--color1);
+  border: 1px solid var(--fourth-color);
+  background-color: var(--third-color);
+}
+.box {
+  padding: 20px;
+  place-content: center;
+}
+.box > p {
+  margin-top: 15px;
+}
+.box1 {
+  grid-column: span 2;
+  background-color: var(--fourth-color);
+}
+.box2,
+.box9 {
+  width: 300px;
+}
+.box3 {
+  grid-column: span 3;
+  background-color: var(--fifth-color);
+  border-radius: 10px;
+}
+.box5 {
+  grid-column: span 2;
+}
+.box6 {
+  grid-column: span 2;
+}
+.box8 {
+  width: 550px;
+}
+.box9,
+.box2,
+.box10 {
+  width: auto;
+}
+.box11 {
+  grid-column: span 3;
+}
+.box4 {
+  position: relative;
+}
+small {
+  background-color: var(--six-color);
+  color: var(--secondary-color);
+  padding: 3px 8px;
+  position: absolute;
+  top: -10px;
+  left: -12px;
+  transform: rotate(-30deg);
+}
+@media (max-width: 640px) {
+  .center {
+    display: block;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    width: 100%;
+    padding: 0 20px;
+  }
+  .box2 {
+    background-color: var(--red);
+    color: var(--secondary-color);
+  }
+  .box {
+    grid-column: span 11;
+  }
+}
